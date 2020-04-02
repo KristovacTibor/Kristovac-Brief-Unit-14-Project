@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 217, 255));
+    min-height: 8vh;
+    border-radius: 40px 40px 40px 40px;
+    margin: 10px 10px;
+}
+.logo{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 35px;
+    text-shadow: 3px 2px 3px;
+
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.navigation li{
+    list-style: none;
+
+}
+.navigation a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navigation :hover{
+    color: rgb(255, 255, 255);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 30px;
+    height: 3px;
+    transition: all 0.5s ease;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+}
+
+p{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 350px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+
+}
+.list{
+    margin-left: 100px;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 100%;
+    border-style: solid;
+}
+
+
+@media screen and (max-width:1024px){
+    .navigation{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .navigation{
+        position: absolute;
+        margin-top: 15px;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 217, 255));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        border-radius: 20px 20px 20px 20px;
+        
+    }
+    .navigation li{
+        opacity: 1;
+        font-size: 20px;
+    }
+    .burger{
+        display: block;
+    }
+    .navigation-active{
+        transform: translateX(0%);
+    }
+    p{
+        padding: 20px 20px 20px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+}    
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
